@@ -19,6 +19,15 @@
         Next &#62;
       </router-link>
     </div>
+    <ul class="pages">
+      <li
+        v-for="i in howManyPages"
+        :key="i"
+        :class="i === page ? 'active-page' : ''"
+      >
+        {{ i }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -57,6 +66,9 @@ export default {
     hasNextPage() {
       var totalPages = Math.ceil(this.totalEvents / 2)
       return this.page < totalPages
+    },
+    howManyPages() {
+      return Math.ceil(this.totalEvents / 2)
     }
   }
 }
@@ -84,5 +96,16 @@ export default {
 
 #page-next {
   text-align: right;
+}
+.pages {
+  width: 15%;
+  margin-top: 25px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.active-page {
+  color: red;
 }
 </style>

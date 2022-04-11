@@ -5,16 +5,20 @@ import About from '../views/About.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/events',
     name: 'EventList',
     component: EventList,
     props: route => ({ page: parseInt(route.query.page) || 1 })
   },
   {
-    path: '/event/:id',
+    path: '/events/:id',
     name: 'EventDetails',
     props: true,
     component: EventDetails
+  },
+  {
+    path: '/event/:id',
+    redirect: () => ({ name: 'EventDetails' })
   },
   {
     path: '/about',

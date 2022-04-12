@@ -37,8 +37,8 @@ const routes = [
     ]
   },
   {
-    path: '/event/:id',
-    redirect: () => ({ name: 'EventDetails' })
+    path: '/event/:afterEvent(.*)',
+    redirect: to => ({ path: `/events/${to.params.afterEvent}` })
   },
   {
     path: '/about',

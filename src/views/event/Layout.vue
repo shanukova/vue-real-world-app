@@ -27,11 +27,7 @@ export default {
         this.event = response.data
       })
       .catch(error => {
-<<<<<<< HEAD
         if (error.response && error.response.status == 404) {
-=======
-        if (error.response && error.response.status === 404) {
->>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
           this.$router.push({
             name: '404Resource',
             params: { resource: 'event' }

@@ -26,18 +26,10 @@ export default {
     background: transparent;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
 #flashMessage {
   animation-name: yellowfade;
   animation-duration: 3s;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

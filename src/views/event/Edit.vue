@@ -7,11 +7,10 @@ export default {
   props: ['event'],
   data: function() {
     return {
-      unsavedChanges: false  // <-- Flag gets set to true if anything
-                             //          is changed on the form
+      unsavedChanges: false
     }
   },
-  beforeRouteLeave(routeTo, routeFrom) {
+  beforeRouteLeave() {
     if (this.unsavedChanges) {
       const answer = window.confirm(
         'Do you really want to leave? You have unsaved changes!'

@@ -4,7 +4,11 @@
     :to="{ name: 'EventDetails', params: { id: event.id } }"
   >
     <div class="event-card">
+<<<<<<< HEAD
       <span>@{{ event.time }} on {{ event.date }}</span>
+=======
+      <span>@ {{ event.time }} on {{ event.date }}</span>
+>>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
       <h4>{{ event.title }}</h4>
     </div>
   </router-link>
@@ -12,6 +16,10 @@
 
 <script>
 export default {
+<<<<<<< HEAD
+=======
+  name: 'EventCard',
+>>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
   props: {
     event: {
       type: Object,
@@ -21,6 +29,10 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
+=======
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+>>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
 <style scoped>
 .event-card {
   padding: 20px;

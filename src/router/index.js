@@ -5,12 +5,21 @@ import EventDetails from '../views/event/Details.vue'
 import EventRegister from '../views/event/Register.vue'
 import EventEdit from '../views/event/Edit.vue'
 import About from '../views/About.vue'
+<<<<<<< HEAD
 import NotFound from '@/views/NotFound.vue'
 import NetworkError from '@/views/NetworkError.vue'
 
 const routes = [
   {
     path: '/',
+=======
+import NotFound from '../views/NotFound.vue'
+import NetworkError from '../views/NetworkError.vue'
+
+const routes = [
+  {
+    path: '/events',
+>>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
     name: 'EventList',
     component: EventList,
     props: route => ({ page: parseInt(route.query.page) || 1 })
@@ -18,8 +27,13 @@ const routes = [
   {
     path: '/events/:id',
     name: 'EventLayout',
+<<<<<<< HEAD
     props: true,
     component: EventLayout,
+=======
+    component: EventLayout,
+    props: true,
+>>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
     children: [
       {
         path: '',
@@ -40,9 +54,13 @@ const routes = [
   },
   {
     path: '/event/:afterEvent(.*)',
+<<<<<<< HEAD
     redirect: to => {
       return { path: '/events/' + to.params.afterEvent }
     }
+=======
+    redirect: to => ({ path: `/events/${to.params.afterEvent}` })
+>>>>>>> 4f03e79d02e7e30ebc7fc75c545e7bf1fdda452c
   },
   {
     path: '/about',

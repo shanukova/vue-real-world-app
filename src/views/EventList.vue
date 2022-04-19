@@ -61,7 +61,7 @@ export default {
       })
   },
   beforeRouteUpdate(routeTo) {
-    return EventService.getEvents(5, parseInt(routeTo.query.page) || 1)
+    return EventService.getEvents(2, parseInt(routeTo.query.page) || 1)
       .then(response => {
         this.events = response.data
         this.totalEvents = response.headers['x-total-count']
